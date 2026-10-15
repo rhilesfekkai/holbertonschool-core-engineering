@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Defines a Square class."""
+"""Define a square."""
+
 
 class Square:
-    """Represents a square."""
+    """Represent a square."""
 
     def __init__(self, size=0):
-        """Initialize a square with a size."""
+        """Initialize a square with a validated size."""
         self.size = size
 
     @property
@@ -24,12 +25,11 @@ class Square:
 
     def area(self):
         """Return the current square area."""
-        return self.__size ** 2
+        return self.__size * self.__size
 
     def my_print(self):
         """Print the square using the # character."""
-        if self.__size == 0:
-            print()
-            return
         for _ in range(self.__size):
             print("#" * self.__size)
+        if self.__size == 0:
+            print()
