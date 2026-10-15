@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Defines a Square class."""
+"""Define a square with size validation."""
+
 
 class Square:
-    """Represents a square."""
+    """Represent a square."""
 
     def __init__(self, size=0):
-        """Initialize a square with a size."""
+        """Initialize a square after validating its size."""
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
